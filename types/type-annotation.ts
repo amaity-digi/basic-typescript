@@ -88,3 +88,15 @@ function isDivisibleBy4And8(num: number): boolean{
 }
 
 console.log(isDivisibleBy4And8(40));
+
+//BigInt type:
+// It is a build in type that allows us to work numbers that are larger than the renge supported by the
+// regular number type.
+// In JS we can't read the whole numbers beyond 2 raise to power 53.
+
+//let maxNumber = Number.MAX_SAFE_INTEGER;
+let maxNumber: bigint = 9007199254740992n; //BigInt literals are not available when targeting lower than ES2020. So we need to change target inside this tsconfig file,  "target": "ES2020",   
+console.log(maxNumber,'Maximum Number');
+
+let bigIntNum = BigInt(9007199254740992n);
+console.log(bigIntNum)
